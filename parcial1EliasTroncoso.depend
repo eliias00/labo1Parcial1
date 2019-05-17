@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1558044682 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/main.c
+1558053621 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/main.c
 	<stdio.h>
+	<stdio_ext.h>
 	<stdlib.h>
+	<string.h>
 	"menu.h"
 	"orquesta.h"
 	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
 
 1558048563 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/validaciones.c
 	<stdio.h>
@@ -20,7 +24,7 @@
 
 1558044266 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/validaciones.h
 
-1558051442 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/menu.c
+1558054865 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/menu.c
 	<stdio.h>
 	<stdio_ext.h>
 	<stdlib.h>
@@ -33,9 +37,9 @@
 
 1558044266 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/menu.h
 
-1558044283 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/orquesta.h
+1558052970 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/orquesta.h
 
-1558048094 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/orquesta.c
+1558053582 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/orquesta.c
 	<stdio.h>
 	<stdio_ext.h>
 	<stdlib.h>
@@ -46,9 +50,10 @@
 	"musico.h"
 	"instrumento.h"
 
-1558050500 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/musico.h
+1558053518 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/musico.h
+	"instrumento.h"
 
-1558051118 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/musico.c
+1558054703 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/musico.c
 	<stdio.h>
 	<stdio_ext.h>
 	<stdlib.h>
@@ -59,9 +64,9 @@
 	"musico.h"
 	"instrumento.h"
 
-1558047636 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/instrumento.h
+1558052971 /home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/instrumento.h
 
-1558050426 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/instrumento.c
+1558054229 source:/home/alumno/Escritorio/ProgLaboMauricio1/parcial1EliasTroncoso/instrumento.c
 	<stdio.h>
 	<stdio_ext.h>
 	<stdlib.h>

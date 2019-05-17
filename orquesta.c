@@ -50,8 +50,6 @@ int altaOrquesta(Orquesta *arrayOrquesta,int cant,int posLibre)
 
     int auxTip;
 
-    int posicion;
-
     if (!getName(arrayOrquesta[posLibre].nombre,"ingrese un nombre: ","error, vuelva a ingresar\n\n",5,51,1))
     {
         if (!getDireccion(arrayOrquesta[posLibre].lugar,"ingrese un lugar: ","error, vuelva a ingresar\n\n",5,51,1))
@@ -64,10 +62,8 @@ int altaOrquesta(Orquesta *arrayOrquesta,int cant,int posLibre)
                 arrayOrquesta[posLibre].isEmpty=LLENO;
                 ret=0;
             }
-
         }
     }
-
     else
     {
         ret=1;

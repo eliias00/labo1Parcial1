@@ -50,8 +50,6 @@ int altaIns(Instrumento *array,int cant,int posLibre)
 
     int auxTip;
 
-    int posicion;
-
     if (!getName(array[posLibre].nombre,"ingrese un nombre: ","error, vuelva a ingresar\n\n",5,51,1))
     {
           if(!getInt("ingrese el tipo(1:CUERDAS,2:VIENTO-MADERA,3:VIENTO-METAL,4:PERCUSION.): ","\nerror,vuelva a intentar",1,5,1,tipAut))
@@ -71,6 +69,24 @@ int altaIns(Instrumento *array,int cant,int posLibre)
     }
     return ret;
 }
+int buscaIdInst (Instrumento *array, int cant, int *idEncontrado)
+{
+    int i;
+    int retorno = -1;
+    Instrumento auxI;
+    printf("\ningrese id de instrumento a buscar: ");
+    scanf("%d", &auxI.id);
+    for(i=0; i < cant; i++)
+    {
+        if (array[i].id == auxI.id)
+        {
+            retorno=0;
+            *idEncontrado=i;
+            break;
+        }
+    }
+    return retorno;
+}
 void imprimirInstrumento(Instrumento *array,int cant)
 {
     int i;
@@ -78,7 +94,22 @@ void imprimirInstrumento(Instrumento *array,int cant)
     {
         if(array[i].isEmpty!=VACIO)
         {
-            printf("nombre:%s tipo:%d id:%d\n",array[i].nombre,array[i].tipo,array[i].id);
+            if(array[i].tipo==1)
+            {
+            printf("nombre:%s cuerdas:%d id:%d\n",array[i].nombre,array[i].tipo,array[i].id);
+            }
+            if(array[i].tipo==2)
+            {
+            printf("nombre:%s viento-madera:%d id:%d\n",array[i].nombre,array[i].tipo,array[i].id);
+            }
+            if(array[i].tipo==3)
+            {
+            printf("nombre:%s viento-metal:%d id:%d\n",array[i].nombre,array[i].tipo,array[i].id);
+            }
+            if(array[i].tipo==4)
+            {
+            printf("nombre:%s percusion:%d id:%d\n",array[i].nombre,array[i].tipo,array[i].id);
+            }
         }
     }
 }

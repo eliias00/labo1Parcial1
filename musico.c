@@ -70,7 +70,7 @@ int altaMusico(Musico *array,Orquesta *array2,Instrumento *array3,int cant,int p
                         auxAut=atoi(idAut);
                         array[posLibre].idOrq=auxAut;
 
-                        if(!buscarElVacioIns(array3,cant,&posicion))
+                        if(!buscaIdInst(array3,cant,&posicion))
                         {
                             printf("se encontro");
                             if(!getInt("ingrese el id del instrumento: ","\nerror,vuelva a intentar",0,20,1,idIns))
@@ -152,17 +152,17 @@ int modificacionMusico(Musico *array,Orquesta *array2,int cant)
             switch(aceptar)
             {
             case 1:
-                getInt("ingrese edad: ","\nerror,vuelva a intentar",1,50,1,edad);
+                getInt("ingrese edad: ","\nerror,vuelva a intentar",1,30,1,edad);
                 auxEdad=atoi(edad);
                 array[posPrueba].edad=auxEdad;
                 break;
             case 2:
-                    if(!buscaIdOrquesta(array2,cant,&posicion))
-                    {
-                        getInt("modifique el id de la orquesta: ","\nerror,vuelva a intentar",0,20,1,idAut);
-                        auxAut=atoi(idAut);
-                        array[posPrueba].idOrq=auxAut;
-                    }
+                if(!buscaIdOrquesta(array2,cant,&posicion))
+                {
+                    getInt("modifique el id de la orquesta: ","\nerror,vuelva a intentar",0,20,1,idAut);
+                    auxAut=atoi(idAut);
+                    array[posPrueba].idOrq=auxAut;
+                }
                 break;
             }
             printf("\nquiere modificar otro campo?\ns/para continuar n/para salir\n");
@@ -209,14 +209,24 @@ int bajaMusico(Musico *array,int cant)
     }
     return 0;
 }
-void imprimirMusico(Musico *array, Instrumento *array2 ,int cant)
+void imprimirMusico(Musico *array, Instrumento *array2,int cant1,int cant2)
 {
     int i;
-    for(i=0; i<cant; i++)
+    int j;
+    for(i=0; i<cant1; i++)
     {
-        if(array[i].isEmpty!=VACIO && array2[i].isEmpty!= VACIO)
+        if(array[i].isEmpty==LLENO )
         {
-            printf("nombre:%s apellido:%s id:%d nombre:%s tipo:%d\n",array[i].nombre,array[i].apellido,array[i].id,array2[i].nombre,array2[i].tipo);
+            for(j=0; j<cant2; j++)
+            {
+                if(array2[j].isEmpty==LLENO)
+                {
+                    if(array[i].id==array2[j].id)
+                    {
+                    printf("nombre:%s apellido:%s id:%d nombre:%s tipo:%d\n",array[i].nombre,array[i].apellido,array[i].id,array2[j].nombre,array2[j].tipo);
+                    }
+                }
+            }
         }
     }
 }

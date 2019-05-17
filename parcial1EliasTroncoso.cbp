@@ -50,6 +50,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="orquesta.h" />
+		<Unit filename="parcial1EliasTroncoso.cbp" />
+		<Unit filename="parcial1EliasTroncoso.depend" />
+		<Unit filename="parcial1EliasTroncoso.layout" />
 		<Unit filename="validaciones.c">
 			<Option compilerVar="CC" />
 		</Unit>

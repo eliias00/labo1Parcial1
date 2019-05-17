@@ -20,12 +20,10 @@ int funcionMenu(void)
     int posLibreMus;
     int posLibreIns;
 
-    int flag1=0;
-    int flag2=0;
-    int flag3=0;
     Orquesta arrayOrq[ORQUESTA];
     Musico arrayMus[MUSICOS];
     Instrumento arrayIns[INSTRUMENTO];
+
     inicializarArrayOrquesta(arrayOrq,ORQUESTA);
     inicializarArrayIns(arrayIns,INSTRUMENTO);
     inicializarArrayM(arrayMus,MUSICOS);
@@ -40,17 +38,25 @@ int funcionMenu(void)
 
     strcpy(arrayMus[0].nombre,"leo");
     strcpy(arrayMus[0].apellido,"tornco");
-
     arrayMus[0].id=0;
+    arrayMus[0].isEmpty=LLENO;
+    arrayMus[0].idIns=0;
 
-     strcpy(arrayIns[0].nombre,"cuerda");
-     arrayIns[0].tipo=2;
-     arrayIns[0].id=0;
-     arrayIns[0].isEmpty=LLENO;
+    strcpy(arrayMus[1].nombre,"elias");
+    strcpy(arrayMus[1].apellido,"jaja");
+    arrayMus[1].id=1;
+    arrayMus[1].isEmpty=LLENO;
 
+    strcpy(arrayIns[0].nombre,"cuerda");
+    arrayIns[0].tipo=2;
+    arrayIns[0].id=0;
+    arrayIns[0].isEmpty=LLENO;
 
+    strcpy(arrayIns[1].nombre,"guit");
+    arrayIns[1].tipo=2;
+    arrayIns[1].id=0;
+    arrayIns[1].isEmpty=LLENO;
     //**********************************************
-
     do
     {
         printf(":::::::::::::::::::::::::::::::::\n");
@@ -71,7 +77,7 @@ int funcionMenu(void)
         case 1:
             if(!buscarElVacioOrquesta(arrayOrq,ORQUESTA,&posLibreOrq))
             {
-              //  flag1=1;
+                //  flag1=1;
                 switch(altaOrquesta(arrayOrq,ORQUESTA,posLibreOrq))
                 {
                 case 0:
@@ -90,17 +96,17 @@ int funcionMenu(void)
             break;
 
         case 2:
-                bajaOrquesta(arrayOrq,ORQUESTA);
+            bajaOrquesta(arrayOrq,ORQUESTA);
 
             break;
         case 3:
-                imprimirOrquestas(arrayOrq,ORQUESTA);
+            imprimirOrquestas(arrayOrq,ORQUESTA);
             break;
         case 4:
             if(!buscarElVacioMusico(arrayMus,MUSICOS,&posLibreMus))
             {
-             //   flag1=1;
-                switch(altaMusico(arrayOrq,arrayOrq,arrayIns,MUSICOS,posLibreMus))
+                //   flag1=1;
+                switch(altaMusico(arrayMus,arrayOrq,arrayIns,MUSICOS,posLibreMus))
                 {
                 case 0:
                     printf("dato ingresado correctamente\n\n");
@@ -118,28 +124,23 @@ int funcionMenu(void)
             break;
 
         case 5:
-
-           // printf("debe cargar el musico primero");
-
-
             modificacionMusico(arrayMus,arrayOrq,MUSICOS);
-
             break;
         case 6:
 
 
-                bajaMusico(arrayMus,MUSICOS);
+            bajaMusico(arrayMus,MUSICOS);
 
             break;
         case 7:
 
-                imprimirMusico(arrayMus,arrayIns,MUSICOS);
+            imprimirMusico(arrayMus,arrayIns,MUSICOS,INSTRUMENTO);
 
             break;
         case 8:
             if(!buscarElVacioIns(arrayIns,INSTRUMENTO,&posLibreIns))
             {
-              //  flag1=1;
+                //  flag1=1;
                 switch(altaIns(arrayIns,INSTRUMENTO,posLibreIns))
                 {
                 case 0:
@@ -159,7 +160,7 @@ int funcionMenu(void)
 
         case 9:
 
-               imprimirInstrumento(arrayIns,INSTRUMENTO);
+            imprimirInstrumento(arrayIns,INSTRUMENTO);
             break;
 
         }
