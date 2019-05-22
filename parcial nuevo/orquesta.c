@@ -7,6 +7,7 @@
 #include "validaciones.h"
 #include "musico.h"
 #include "instrumento.h"
+#include "informes.h"
 #define VACIO -1
 #define LLENO 1
 

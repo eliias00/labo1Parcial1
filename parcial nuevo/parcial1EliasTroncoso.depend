@@ -154,3 +154,99 @@
 	"musico.h"
 	"instrumento.h"
 
+1558476404 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/instrumento.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
+	"informes.h"
+
+1558474704 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/menu.h
+
+1558474704 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/orquesta.h
+
+1558474704 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/validaciones.h
+
+1558474704 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/musico.h
+	"instrumento.h"
+
+1558474704 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/instrumento.h
+
+1558474704 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
+
+1558483664 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/menu.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
+	"informes.h"
+
+1558476404 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/musico.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"informes.h"
+
+1558476404 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/orquesta.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
+	"informes.h"
+
+1558476404 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/validaciones.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"musico.h"
+	"instrumento.h"
+	"informes.h"
+
+1558480314 /home/alumno/Escritorio/labo1Parcial1/parcial nuevo/informes.h
+
+1558482866 source:/home/alumno/Escritorio/labo1Parcial1/parcial nuevo/informes.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"orquesta.h"
+	"validaciones.h"
+	"musico.h"
+	"instrumento.h"
+	"informes.h"
+

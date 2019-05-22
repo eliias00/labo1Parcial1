@@ -8,6 +8,7 @@
 #include "musico.h"
 #include "musico.h"
 #include "instrumento.h"
+#include "informes.h"
 
 int getString(char *msg,char *msgError,int minimo,int maximo,int reintentos,char *resultado)
 {

@@ -10,6 +10,7 @@
 #define ORQUESTA 50
 #define MUSICOS 1000
 #define INSTRUMENTO 20
+#include "informes.h"
 #define LLENO 1
 #define VACIO -1
 int funcionMenu(void)
@@ -31,35 +32,103 @@ int funcionMenu(void)
     inicializarArrayIns(arrayIns,INSTRUMENTO);
     inicializarArrayM(arrayMus,MUSICOS);
     //**********************************************
-    /*   strcpy(arrayOrq[0].nombre,"jajaja");
-       strcpy(arrayOrq[0].lugar,"lanus");
-       arrayOrq[0].id=0;
+       strcpy(arrayOrq[0].nombre,"orquesta1");
+       strcpy(arrayOrq[0].lugar,"lagar1");
+       arrayOrq[0].id=1;
        arrayOrq[0].isEmpty=LLENO;
        arrayOrq[0].tipo=1;
 
-       strcpy(arrayMus[0].nombre,"leo");
-       strcpy(arrayMus[0].apellido,"tornco");
-       arrayMus[0].id=0;
+       strcpy(arrayOrq[1].nombre,"orquesta2");
+       strcpy(arrayOrq[1].lugar,"lagar1");
+       arrayOrq[1].id=2;
+       arrayOrq[1].isEmpty=LLENO;
+       arrayOrq[1].tipo=2;
+
+       strcpy(arrayOrq[3].nombre,"orquesta3");
+       strcpy(arrayOrq[3].lugar,"lagar2");
+       arrayOrq[3].id=3;
+       arrayOrq[3].isEmpty=LLENO;
+       arrayOrq[3].tipo=3;
+
+       strcpy(arrayOrq[4].nombre,"orquesta4");
+       strcpy(arrayOrq[4].lugar,"lagar3");
+       arrayOrq[4].id=4;
+       arrayOrq[4].isEmpty=LLENO;
+       arrayOrq[4].tipo=2;
+
+//*******************************************
+       strcpy(arrayMus[0].nombre,"mus1");
+       strcpy(arrayMus[0].apellido,"mus1");
+       arrayMus[0].id=1;
+       arrayMus[0].edad=30;
        arrayMus[0].isEmpty=LLENO;
-       arrayMus[0].idIns=0;
-       arrayMus[0].idOrq=0;
+       arrayMus[0].idIns=2;
+       arrayMus[0].idOrq=1;
 
-       strcpy(arrayMus[1].nombre,"elias");
-       strcpy(arrayMus[1].apellido,"jaja");
-       arrayMus[1].id=1;
+       strcpy(arrayMus[1].nombre,"mus2");
+       strcpy(arrayMus[1].apellido,"mus2");
+       arrayMus[1].id=2;
+       arrayMus[1].edad=20;
        arrayMus[1].isEmpty=LLENO;
-       arrayMus[1].idIns=1;
-       arrayMus[1].idOrq=0;
+       arrayMus[1].idIns=5;
+       arrayMus[1].idOrq=1;
 
-       strcpy(arrayIns[0].nombre,"cuerda");
-       arrayIns[0].tipo=2;
-       arrayIns[0].id=0;
+        strcpy(arrayMus[2].nombre,"mus3");
+       strcpy(arrayMus[2].apellido,"mus3");
+       arrayMus[2].id=3;
+       arrayMus[2].edad=25;
+       arrayMus[2].isEmpty=LLENO;
+       arrayMus[2].idIns=2;
+       arrayMus[2].idOrq=4;
+
+       strcpy(arrayMus[3].nombre,"mus4");
+       strcpy(arrayMus[3].apellido,"mus4");
+       arrayMus[3].id=4;
+       arrayMus[3].edad=27;
+       arrayMus[3].isEmpty=LLENO;
+       arrayMus[3].idIns=1;
+       arrayMus[3].idOrq=4;
+
+       strcpy(arrayMus[4].nombre,"mus5");
+       strcpy(arrayMus[4].apellido,"mus5");
+       arrayMus[4].id=5;
+       arrayMus[4].edad=22;
+       arrayMus[4].isEmpty=LLENO;
+       arrayMus[4].idIns=3;
+       arrayMus[4].idOrq=1;
+
+       strcpy(arrayMus[5].nombre,"mus6");
+       strcpy(arrayMus[5].apellido,"mus6");
+       arrayMus[5].id=6;
+       arrayMus[5].edad=35;
+       arrayMus[5].isEmpty=LLENO;
+       arrayMus[5].idIns=4;
+       arrayMus[5].idOrq=3;
+
+       strcpy(arrayIns[0].nombre,"inst1");
+       arrayIns[0].tipo=1;
+       arrayIns[0].id=1;
        arrayIns[0].isEmpty=LLENO;
 
-       strcpy(arrayIns[1].nombre,"guit");
+       strcpy(arrayIns[1].nombre,"inst2");
        arrayIns[1].tipo=2;
-       arrayIns[1].id=1;
-       arrayIns[1].isEmpty=LLENO;*/
+       arrayIns[1].id=2;
+       arrayIns[1].isEmpty=LLENO;
+
+       strcpy(arrayIns[2].nombre,"inst3");
+       arrayIns[2].tipo=2;
+       arrayIns[2].id=3;
+       arrayIns[2].isEmpty=LLENO;
+
+       strcpy(arrayIns[3].nombre,"inst4");
+       arrayIns[3].tipo=3;
+       arrayIns[3].id=4;
+       arrayIns[3].isEmpty=LLENO;
+
+        strcpy(arrayIns[4].nombre,"inst5");
+       arrayIns[4].tipo=4;
+       arrayIns[4].id=5;
+       arrayIns[4].isEmpty=LLENO;
     //**********************************************
     do
     {
@@ -207,6 +276,8 @@ int funcionMenu(void)
                 imprimirInstrumento(arrayIns,INSTRUMENTO);
             }
             break;
+        case 10:
+        informes(arrayOrq,arrayIns,arrayMus,ORQUESTA,MUSICOS,INSTRUMENTO);
         }
         printf("\nQuiere volver al menu?\ns/Para continuar n/Para salir\n");
         scanf("%s",&seguir);
